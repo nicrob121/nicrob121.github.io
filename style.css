@@ -60,7 +60,238 @@ body {
     border-width: 2px;
   
   
+  }/* CSS files add styling rules to your content */
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  #title {
+    font-family: "Charmonman";
+    font-size: 30px;
+    text-align: center;
+    animation-name: title;
+    animation-duration: 0.8s;
+  }
+  #navbar {
+    display: flex;
+    justify-content: center;
+  
+    animation-name: nav;
+    animation-duration: 0.8s;
+    animation-delay: 1s;
+  }
+  a{
+    text-decoration:none;
+    color:white;
+    font-size:20px
+  }
+  
+  a:hover{
+    text-decoration: underline;
+    padding-right:10px;
+    text-shadow: 2px 2px grey;
+    padding-bottom:10px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  ul li {
+    display: inline-block;
+    padding: 15px;
+    margin-right: 75px;
+    margin-top: 0px;
+    font-family: "Charmonman";
+    color: white;
+    font-size: 17px;
+  }
+  li:hover {
+    color: black;
+  }
+  #imageBox {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .pics {
+    width: 370px;
+    height: 420px;
+    border-radius: 15%;
+  }
+  
+  #pic1 {
+    animation-name: pics;
+    animation-duration: 0.8s;
+    animation-delay: 2s;
+  }
+  
+  #pic2 {
+    animation-name: pics;
+    animation-duration: 0.8s;
+    animation-delay: 3s;
+  }
+  #pic3 {
+    animation-name: pics;
+    animation-duration: 0.8s;
+    animation-delay: 4s;
+  }
+  @keyframes pics {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes title {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes nav {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .img_text {
+    color: white;
+    background-color: #A6808C;
+    opacity: 0;
+    text-align: center;
+    border-radius: 12%;
+    font-family: "Average";
+    font-size: 16px;
+    padding: 5px;
+    width: 350px;
+    height: auto;
+  }
+  
+  #pic1:hover + .img_text {
+    opacity: 1;
+  }
+  
+  #pic2:hover + .img_text {
+    opacity: 1;
+  }
+  
+  #pic3:hover + .img_text{
+    opacity:1;
+  }
+  
+  @keyframes siteText {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-right: 100%;
+      width: 100%;
+    }
+  }
+  
+  #siteText {
+    display: inline;
+    margin-top: 0px;
+    color: white;
+    left: -250px;
+    font-family: "Charmonman";
+    font-size: 30px;
+    position: relative;
+    animation-name: siteText;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+  }
+  
+  body {
+    margin: 25px;
+    background-color: #D0B8AC;
+  }
+  
+  #text-box1{
+    margin:0px;
+    margin-top:16px;
+    color: white;
+    background-color: #A6808C;
+    text-align: center;
+    font-family: "Average";
+    font-size: 30px;
+    padding:20px;
+      
+  }
+  
+  #text-box2{
+    margin:0px;
+    margin-top:16px;
+    color: white;
+    background-color: #A6808C;
+    text-align: left;
+    font-family: "Average";
+    font-size: 20px;
+    padding:20px;
+      
+  }
+  h1{
+    color:white;
+    text-decoration: underline;
+    text-align: left;
+    font-family: "Average";
+  }
+  h3{
+    text-align: left;
+    font-family: "Average";
+    font-size:25px;
+    padding-bottom:0px;
+    margin-bottom:0px;
+  }
+  h4{
+    text-align: left;
+    font-family: "Average";
+    padding:0px;
+    margin:0px;
+    margin-bottom:8px;
+  }
+  
+  /* todo: Add a breakpoint if the screen is 700px or less  */
+  @media only screen and (max-width: 700px) {
+    #imageBox {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 3;
+    }
+  
+    #siteText {
+      display: none;
+    }
+    .img_text {
+      opacity: 1;
+    }
+  }
+  
   img:hover {
     border-style: none;
   }
